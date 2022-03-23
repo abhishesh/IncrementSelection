@@ -36,7 +36,7 @@ class IncrementSelectionCommand(sublime_plugin.TextCommand):
                 def gen(counter):
                     result = str(start + counter)
                     while len(result) < length:
-                        result = '0' + result
+                        result = f'0{result}'
                     return result
             else:
                 start = int(start)
